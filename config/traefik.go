@@ -2,13 +2,12 @@ package config
 
 import (
 	"fmt"
-	"net"
-	"strings"
-
 	"go-micro.dev/v4/server"
 	"go-micro.dev/v4/util/addr"
+	"net"
 	"phanes/lib/traefik"
 	"phanes/utils"
+	"strings"
 )
 
 func Register(name string, srv server.Server) error {

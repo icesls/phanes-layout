@@ -1,10 +1,9 @@
 package logger
 
 import (
+	"go.uber.org/zap/zapcore"
 	"io"
 	"time"
-
-	"go.uber.org/zap/zapcore"
 )
 
 func newBufferedWriteSyncer(size int, duration time.Duration, w io.Writer) zapcore.WriteSyncer {

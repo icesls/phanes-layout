@@ -1,7 +1,7 @@
 package broker
 
 import (
-	"github.com/asim/go-micro/plugins/broker/nats/v4"
+	"github.com/go-micro/plugins/v4/broker/nats"
 	"go-micro.dev/v4/broker"
 	"phanes/config"
 	"phanes/utils"

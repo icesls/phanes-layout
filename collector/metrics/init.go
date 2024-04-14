@@ -1,8 +1,6 @@
 package metrics
 
 import (
-	"net/http"
-
 	client "github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/collectors"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -10,6 +8,7 @@ import (
 	metricApi "go.opentelemetry.io/otel/metric"
 	"go.opentelemetry.io/otel/sdk/metric"
 	"go.uber.org/zap"
+	"net/http"
 	log "phanes/collector/logger"
 	"phanes/config"
 )

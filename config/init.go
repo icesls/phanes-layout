@@ -1,13 +1,9 @@
 package config
 
 import (
-	"log"
-	"os"
-	"time"
-
-	"github.com/asim/go-micro/plugins/config/encoder/toml/v4"
-	"github.com/asim/go-micro/plugins/config/encoder/yaml/v4"
-	"github.com/asim/go-micro/plugins/config/source/etcd/v4"
+	"github.com/go-micro/plugins/v4/config/encoder/toml"
+	"github.com/go-micro/plugins/v4/config/encoder/yaml"
+	"github.com/go-micro/plugins/v4/config/source/etcd"
 	"github.com/urfave/cli/v2"
 	"go-micro.dev/v4/cmd"
 	"go-micro.dev/v4/config"
@@ -17,9 +13,12 @@ import (
 	"go-micro.dev/v4/config/reader/json"
 	"go-micro.dev/v4/config/source"
 	"go-micro.dev/v4/config/source/file"
+	"log"
+	"os"
 	"phanes/lib/traefik"
 	"phanes/model"
 	"phanes/utils"
+	"time"
 )
 
 func Init() func() {
@@ -89,7 +88,7 @@ func Init() func() {
 	for _, init := range inits {
 		cancels = append(cancels, init())
 	}
-	
+
 	return func() {
 		close(ExitC)
 		for _, cancel := range cancels {

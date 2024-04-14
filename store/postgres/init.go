@@ -3,7 +3,6 @@ package postgres
 import (
 	"context"
 	"database/sql"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	log "phanes/collector/logger"

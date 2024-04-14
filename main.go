@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"phanes/utils"
 
 	"phanes/assistant"
 	"phanes/bll"
@@ -36,5 +37,6 @@ func main() {
 			cancel()
 		})
 	}
-	config.MicroService.Run()
+
+	utils.Throw(config.MicroService.Run())
 }

@@ -1,8 +1,6 @@
 package grpc
 
 import (
-	"time"
-
 	"github.com/asim/go-micro/plugins/registry/etcd/v4"
 	"github.com/asim/go-micro/plugins/server/grpc/v4"
 	"go-micro.dev/v4"
@@ -10,6 +8,7 @@ import (
 	"go-micro.dev/v4/server"
 	"phanes/config"
 	"phanes/server/grpc/middleware"
+	"time"
 )
 
 func Init() micro.Option {

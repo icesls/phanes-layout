@@ -2,7 +2,6 @@ package redis
 
 import (
 	"context"
-
 	"github.com/go-redis/redis/v8"
 	log "phanes/collector/logger"
 )

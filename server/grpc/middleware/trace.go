@@ -3,7 +3,6 @@ package middleware
 import (
 	"context"
 	"fmt"
-
 	"go-micro.dev/v4/client"
 	"go-micro.dev/v4/metadata"
 	"go-micro.dev/v4/registry"
@@ -41,7 +40,6 @@ func ClientTraceWrapper() client.CallWrapper {
 
 			libTrace.Inject(ctx, m)
 			ctx = metadata.NewContext(ctx, m)
-
 
 			defer func() {
 				span.SetAttributes(

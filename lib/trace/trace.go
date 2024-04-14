@@ -2,9 +2,7 @@ package trace
 
 import (
 	"context"
-
 	"go-micro.dev/v4/metadata"
-
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/baggage"

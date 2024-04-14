@@ -2,12 +2,11 @@ package middleware
 
 import (
 	"context"
-	"time"
-
 	"go-micro.dev/v4/server"
 	"go.uber.org/zap"
 	log "phanes/collector/logger"
 	"phanes/utils"
+	"time"
 )
 
 func Log() server.HandlerWrapper {

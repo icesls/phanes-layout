@@ -2,15 +2,14 @@ package logger
 
 import (
 	"context"
-	"io"
-	"os"
-	"time"
-
 	"github.com/uptrace/opentelemetry-go-extra/otelzap"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
+	"io"
+	"os"
 	"phanes/config"
 	"phanes/model"
+	"time"
 )
 
 type zapLog struct {

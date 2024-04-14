@@ -1,9 +1,8 @@
 package logger
 
 import (
-	"io"
-
 	"go.uber.org/zap/zapcore"
+	"io"
 	"phanes/config"
 )
 

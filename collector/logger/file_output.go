@@ -1,11 +1,10 @@
 package logger
 
 import (
+	"gopkg.in/natefinch/lumberjack.v2"
 	"io"
 	"os"
 	"strings"
-
-	"gopkg.in/natefinch/lumberjack.v2"
 )
 
 func fileOutputWriter(filePath string, fileName string, maxSize, maxAge int) io.Writer {
