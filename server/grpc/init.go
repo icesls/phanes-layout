@@ -1,8 +1,8 @@
 package grpc
 
 import (
-	"github.com/asim/go-micro/plugins/registry/etcd/v4"
-	"github.com/asim/go-micro/plugins/server/grpc/v4"
+	"github.com/go-micro/plugins/v4/registry/etcd"
+	"github.com/go-micro/plugins/v4/server/grpc"
 	"go-micro.dev/v4"
 	"go-micro.dev/v4/registry"
 	"go-micro.dev/v4/server"

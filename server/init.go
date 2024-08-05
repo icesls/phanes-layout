@@ -3,12 +3,13 @@ package server
 import (
 	"context"
 
-	"github.com/asim/go-micro/plugins/client/grpc/v4"
-	"github.com/asim/go-micro/plugins/registry/etcd/v4"
-	"github.com/asim/go-micro/plugins/wrapper/select/roundrobin/v4"
+	"github.com/go-micro/plugins/v4/client/grpc"
+	"github.com/go-micro/plugins/v4/registry/etcd"
+	"github.com/go-micro/plugins/v4/wrapper/select/roundrobin"
 	"go-micro.dev/v4"
 	"go-micro.dev/v4/client"
 	"go-micro.dev/v4/registry"
+
 	log "phanes/collector/logger"
 	"phanes/config"
 	"phanes/event"

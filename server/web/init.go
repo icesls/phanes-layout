@@ -1,19 +1,17 @@
 package web
 
 import (
-	"github.com/asim/go-micro/plugins/registry/etcd/v4"
-	"github.com/asim/go-micro/plugins/server/http/v4"
-	"phanes/server/web/middleware"
-	"phanes/server/web/v1"
-
-	"time"
-
 	"github.com/gin-gonic/gin"
+	"github.com/go-micro/plugins/v4/registry/etcd"
+	"github.com/go-micro/plugins/v4/server/http"
 	"go-micro.dev/v4"
 	"go-micro.dev/v4/registry"
 	"go-micro.dev/v4/server"
 	"phanes/config"
+	"phanes/server/web/middleware"
+	"phanes/server/web/v1"
 	"phanes/utils"
+	"time"
 )
 
 var (
@@ -53,5 +51,6 @@ func Init() micro.Option {
 	if config.Conf.Traefik.Enabled {
 		utils.Throw(config.Register(webName, srv))
 	}
+
 	return micro.Server(srv)
 }
